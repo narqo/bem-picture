@@ -1,0 +1,14 @@
+block('Picture').elem('source')(function() {
+    tag()('source'),
+    attrs()(function() {
+        var ctx = this.ctx,
+            srcset = ctx.url;
+
+        ctx.density && (srcset += ' ' + ctx.density);
+
+        return {
+            srcset : srcset,
+            type : ctx.type
+        };
+    })
+})

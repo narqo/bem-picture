@@ -1,0 +1,28 @@
+block('Picture')(
+    tag()('picture'),
+    content()(function() {
+        var ctx = this.ctx,
+            res = [];
+
+        ctx.sources &&
+            (res = ctx.sources.map(function(src) {
+                return {
+                    elem : 'source',
+                    url : src.url,
+                    density : src.density
+                };
+            }));
+
+        ctx.url &&
+            res.push({
+                block : 'image',
+                mix : { block : this.block, elem : 'image' },
+                url : ctx.url,
+                width : ctx.width,
+                height : ctx.height,
+                alt : ctx.alt
+            });
+
+        return res;
+    })
+)

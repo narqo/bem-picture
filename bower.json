@@ -1,0 +1,15 @@
+{
+  "name": "bem-picture",
+  "version": "0.1.0",
+  "private": true,
+  "authors": [
+    "Vladimir Varankin <nek.narqo@gmail.com> (http://github.com/narqo)"
+  ],
+  "dependencies": {
+    "bem-core": "bem-core#^2.4.0",
+    "bem-components": "bem-components#1f3cbe1dd45d4419ceeeb19cdc7ebdad0e27f004"
+  },
+  "devDependencies": {
+    "bem-pr": "~0.10.0"
+  }
+}
